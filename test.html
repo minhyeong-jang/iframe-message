@@ -12,13 +12,13 @@
   <a href="/iframe-message/test2.html">테스트2 이동</a>
   <a href="/iframe-message/test3.html">테스트3 이동</a>
   <script>
-    // $(document).ready(function() {
-    //   // 무신사 파트너에서 Iframe으로 임베딩 되어있는 경우
-    //   if(window.top !== window.self) {
-    //     // *.musinsa 도메인으로 메시지를 전송한다.
-    //     window.parent.postMessage({ event: "HISTORY_PUSH_STATE", url: window.location.href }, 'https://*.musinsa.com');
-    //   }
-    // });
+    $(document).ready(function() {
+      // 무신사 파트너에서 Iframe으로 임베딩 되어있는 경우
+      if(window.top !== window.self) {
+        // *.musinsa 도메인으로 메시지를 전송한다.
+        window.parent.postMessage({ event: "HISTORY_PUSH_STATE", url: window.location.href }, 'https://*.musinsa.com');
+      }
+    });
   </script>
 </body>
 </html>
